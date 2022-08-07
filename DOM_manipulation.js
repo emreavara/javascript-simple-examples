@@ -28,3 +28,17 @@ const spanBye = document.querySelector("#bye")
 spanBye.remove()
 const div3 = document.querySelector(".parent3")
 div3.removeChild(spanHi)
+
+// Modifying element attributes
+
+const mark = document.querySelector("#mark") // getting id 
+console.log(mark.getAttribute("id"))
+mark.setAttribute('id',"newMarkId") // setting id 
+console.log(mark.getAttribute("id"))
+mark.id = "newMarkId2"
+console.log(mark.getAttribute("id"))
+
+// Removing element attributes
+console.log(mark.getAttribute('title'))
+mark.removeAttribute('title')
+console.log(mark.getAttribute('title'))
