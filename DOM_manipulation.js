@@ -12,9 +12,19 @@ div.innerText = "Hello World"
 div.textContent = "Hello World 2"
 body.append(div)
 
-
+// Modify elements in DOM
 const div2 = document.createElement("div")
-div.innerText  = "<strong> Hellow World </strong>"  // ignores html tags and appends as is
-div2.innerHTML = "<strong> Hellow World </strong>"  // recognize html tags and apply them
+div.innerText  = "<strong> Hello World </strong>"  // ignores html tags and appends as is
+div2.innerHTML = "<strong> Hello World </strong>"  // recognize html tags and apply them ** Not secure when the text is given by the user
+const strong = document.createElement('strong')
+strong.innerText = "Some text"
+body.append(strong)
 body.append(div2)
 
+// Remove element from DOM
+const spanHi = document.querySelector("#hi")
+const spanBye = document.querySelector("#bye")
+
+spanBye.remove()
+const div3 = document.querySelector(".parent3")
+div3.removeChild(spanHi)
